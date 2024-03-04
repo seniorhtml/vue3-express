@@ -9,6 +9,7 @@ withDefaults(
   }>(),
   {}
 );
+
 defineEmits<{
   (event: 'update:modelValue', value: boolean): void;
 }>();
