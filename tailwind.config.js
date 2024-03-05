@@ -1,7 +1,7 @@
 const container = 1440;
 
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./front/index.html', './front/src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     screens: {
       xs: { max: '475px' },

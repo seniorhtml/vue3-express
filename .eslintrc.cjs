@@ -5,12 +5,22 @@ module.exports = {
     es2021: true,
     'vue/setup-compiler-macros': true
   },
-  extends: ['eslint:recommended', '@vue/prettier', '@vue/typescript/recommended', 'plugin:markdown/recommended', 'plugin:vue/vue3-essential'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    '@vue/prettier',
+    '@vue/typescript/recommended',
+    'plugin:markdown/recommended',
+    'plugin:vue/vue3-essential'
+  ],
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
+    parser: '@typescript-eslint/parser'
   },
-  plugins: ['simple-import-sort', 'import'],
+  plugins: ['simple-import-sort', 'import', 'prettier'],
   rules: {
+    '@typescript-eslint/ban-ts-comment': 'off',
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     eqeqeq: 'off',

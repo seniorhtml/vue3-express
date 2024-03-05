@@ -1,14 +1,14 @@
+import { resolve } from 'node:path';
+
 import vue from '@vitejs/plugin-vue';
-import { fileURLToPath, URL } from 'url';
 import { defineConfig } from 'vite';
 import eslintPlugin from 'vite-plugin-eslint';
 
-// https://vitejs.dev/config/
+// @ts-ignore
 export default defineConfig({
+  root: './front',
   plugins: [vue(), eslintPlugin()],
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+    alias: [{ find: '@', replacement: resolve(__dirname, './front/src') }]
   }
 });

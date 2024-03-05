@@ -4,7 +4,7 @@
     "allowJs": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "strict": true,
     "strictBindCallApply": true,
@@ -15,14 +15,15 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "sourceMap": true,
+    "noImplicitAny": false,
     "baseUrl": "./",
     "types": ["vite/client", "element-plus/global"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["front/src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["vite.config.*", "src/**/*", "src/**/*.vue"],
+  "include": ["vite.config.*", "front/**/*", "back/**/*"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }] // Sets up project references to another TypeScript project.
 }
